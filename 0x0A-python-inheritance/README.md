@@ -37,5 +37,18 @@ Write a function that returns True if the object is an instance of a class that 
 Prototype: def inherits_from(obj, a_class):
 You are not allowed to import any module
 
+12. My integer
+#advanced
+Write a class MyInt that inherits from int:
 
+MyInt is a rebel. MyInt has == and != operators inverted
+You are not allowed to import any module
+
+13. Can I?
+#advanced
+Write a function that adds a new attribute to an object if it’s possible:
+
+Raise a TypeError exception, with the message can't add new attribute if the object can’t have new attribute
+You are not allowed to use try/except
+You are not allowed to import any module
 
