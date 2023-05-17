@@ -1,6 +1,7 @@
 0. My privileges!
 mandatory
 Write a script that lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost).
+
 1. Root user
 mandatory
 Write a script that creates the MySQL server user user_0d_1.
@@ -8,6 +9,7 @@ Write a script that creates the MySQL server user user_0d_1.
 user_0d_1 should have all privileges on your MySQL server
 The user_0d_1 password should be set to user_0d_1_pwd
 If the user user_0d_1 already exists, your script should not fail
+
 2. Read user
 mandatory
 Write a script that creates the database hbtn_0d_2 and the user user_0d_2.
@@ -16,6 +18,7 @@ user_0d_2 should have only SELECT privilege in the database hbtn_0d_2
 The user_0d_2 password should be set to user_0d_2_pwd
 If the database hbtn_0d_2 already exists, your script should not fail
 If the user user_0d_2 already exists, your script should not fail
+
 3. Always a name
 mandatory
 Write a script that creates the table force_name on your MySQL server.
@@ -25,6 +28,7 @@ id INT
 name VARCHAR(256) can’t be null
 The database name will be passed as an argument of the mysql command
 If the table force_name already exists, your script should not fail
+
 4. ID can't be null
 mandatory
 Write a script that creates the table id_not_null on your MySQL server.
@@ -34,6 +38,7 @@ id INT with the default value 1
 name VARCHAR(256)
 The database name will be passed as an argument of the mysql command
 If the table id_not_null already exists, your script should not fail
+
 5. Unique ID
 mandatory
 Write a script that creates the table unique_id on your MySQL server.
@@ -43,6 +48,7 @@ id INT with the default value 1 and must be unique
 name VARCHAR(256)
 The database name will be passed as an argument of the mysql command
 If the table unique_id already exists, your script should not fail
+
 6. States table
 mandatory
 Write a script that creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on your MySQL server.
@@ -52,6 +58,7 @@ id INT unique, auto generated, can’t be null and is a primary key
 name VARCHAR(256) can’t be null
 If the database hbtn_0d_usa already exists, your script should not fail
 If the table states already exists, your script should not fail
+
 7. Cities table
 mandatory
 Write a script that creates the database hbtn_0d_usa and the table cities (in the database hbtn_0d_usa) on your MySQL server.
@@ -62,6 +69,7 @@ state_id INT, can’t be null and must be a FOREIGN KEY that references to id of
 name VARCHAR(256) can’t be null
 If the database hbtn_0d_usa already exists, your script should not fail
 If the table cities already exists, your script should not fail
+
 8. Cities of California
 mandatory
 Write a script that lists all the cities of California that can be found in the database hbtn_0d_usa.
@@ -166,3 +174,49 @@ Results must be sorted in ascending order by the show title and genre name
 You can use only one SELECT statement
 The database name will be passed as an argument of the mysql command
 
+17. Not my genre
+#advanced
+Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 16-shows_by_genre.sql)
+
+Write a script that uses the hbtn_0d_tvshows database to list all genres not linked to the show Dexter
+
+The tv_shows table contains only one record where title = Dexter (but the id can be different)
+Each record should display: tv_genres.name
+Results must be sorted in ascending order by the genre name
+You can use a maximum of two SELECT statement
+The database name will be passed as an argument of the mysql command
+
+18. No Comedy tonight!
+#advanced
+Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 100-not_my_genres.sql)
+
+Write a script that lists all shows without the genre Comedy in the database hbtn_0d_tvshows.
+
+The tv_genres table contains only one record where name = Comedy (but the id can be different)
+Each record should display: tv_shows.title
+Results must be sorted in ascending order by the show title
+You can use a maximum of two SELECT statement
+The database name will be passed as an argument of the mysql command9. Rotten tomatoes
+#advanced
+Import the database hbtn_0d_tvshows_rate dump to your MySQL server: download
+
+Write a script that lists all shows from hbtn_0d_tvshows_rate by their rating.
+
+Each record should display: tv_shows.title - rating sum
+Results must be sorted in descending order by the rating
+You can use only one SELECT statement
+The database name will be passed as an argument of th
+
+
+
+
+20. Best genre
+#advanced
+Import the database dump from hbtn_0d_tvshows_rate to your MySQL server: download (same as 102-rating_shows.sql)
+
+Write a script that lists all genres in the database hbtn_0d_tvshows_rate by their rating.
+
+Each record should display: tv_genres.name - rating sum
+Results must be sorted in descending order by their rating
+You can use only one SELECT statement
+The database name will be passed as an argument of the mysql command
